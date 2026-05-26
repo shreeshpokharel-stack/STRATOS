@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>STRATOS</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>🚀 STRATOS</h2>
+
+<a href="#dashboard">🏠 Dashboard</a>
+<a href="#football">⚽ Football</a>
+<a href="#cricket">🏏 Cricket</a>
+<a href="#ai">🤖 AI Hub</a>
+<a href="#music">🎵 Music</a>
+<a href="#social">🌐 Social</a>
+<a href="#notes">📝 Notes</a>
+<a href="#calculator">🧮 Calculator</a>
+<a href="#clock">🌍 Clocks</a>
+
+</div>
+
+<div class="main">
+
+<section id="dashboard">
+
+<h1>STRATOS</h1>
+
+<p class="subtitle">
+Your Digital Command Center
+</p>
+
+<br>
+
+<input
+type="text"
+id="searchBox"
+placeholder="🔍 Search websites...">
+
+<br><br>
+
+<button onclick="searchSite()">
+Search
+</button>
+
+<button onclick="toggleTheme()">
+🌙 Theme
+</button>
+
+<div class="clock">
+<h2 id="time"></h2>
+</div>
+
+<div class="dashboard-grid">
+
+<div class="card">
+<h2>🤖 AI Hub</h2>
+<p>ChatGPT, Grok, Gemini and Claude.</p>
+</div>
+
+<div class="card">
+<h2>⚽ Football Hub</h2>
+<p>Football streams and scores.</p>
+</div>
+
+<div class="card">
+<h2>🏏 Cricket Hub</h2>
+<p>Cricket streaming center.</p>
+</div>
+
+<div class="card">
+<h2>🎵 Music Hub</h2>
+<p>Spotify integration.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="football">
+
+<h1>⚽ Football Center</h1>
+
+<div class="card">
+<h2>LiveSports077</h2>
+
+<a target="_blank"
+href="https://www.livesports077.com/">
+Open Website →
+</a>
+
+</div>
+
+<div class="card">
+<h2>SofaScore</h2>
+
+<a target="_blank"
+href="https://www.sofascore.com/">
+Open Website →
+</a>
+
+</div>
+
+</section>
+
+<section id="cricket">
+
+<h1>🏏 Cricket Center</h1>
+
+<div class="card">
+
+<h2>YosinTV</h2>
+
+<a target="_blank"
+href="https://www.yosintv.net/">
+Open Website →
+</a>
+
+</div>
+
+</section>
+
+<section id="ai">
+
+<h1>🤖 AI Hub</h1>
+
+<div class="dashboard-grid">
+
+<div class="card">
+<h2>ChatGPT</h2>
+
+<a target="_blank"
+href="https://chatgpt.com">
+Launch →
+</a>
+
+</div>
+
+<div class="card">
+<h2>Grok</h2>
+
+<a target="_blank"
+href="https://grok.com">
+Launch →
+</a>
+
+</div>
+
+<div class="card">
+<h2>Gemini</h2>
+
+<a target="_blank"
+href="https://gemini.google.com">
+Launch →
+</a>
+
+</div>
+
+<div class="card">
+<h2>Claude</h2>
+
+<a target="_blank"
+href="https://claude.ai">
+Launch →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="music">
+
+<h1>🎵 Music</h1>
+
+<div class="card">
+
+<h2>Spotify</h2>
+
+<a target="_blank"
+href="https://open.spotify.com">
+Open Spotify →
+</a>
+
+</div>
+
+</section>
+
+<section id="social">
+
+<h1>🌐 Social Media</h1>
+
+<div class="dashboard-grid">
+
+<div class="card">
+
+<h2>YouTube</h2>
+
+<a target="_blank"
+href="https://youtube.com">
+Open →
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Facebook</h2>
+
+<a target="_blank"
+href="https://facebook.com">
+Open →
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Instagram</h2>
+
+<a target="_blank"
+href="https://instagram.com">
+Open →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="notes">
+
+<h1>📝 Notes</h1>
+
+<div class="card">
+
+<textarea
+id="noteArea"
+rows="10"
+placeholder="Write your notes here..."></textarea>
+
+<br><br>
+
+<button onclick="saveNote()">
+Save Note
+</button>
+
+</div>
+
+</section>
+
+<section id="calculator">
+
+<h1>🧮 Calculator</h1>
+
+<div class="card">
+
+<input
+id="num1"
+type="number"
+placeholder="First Number">
+
+<br><br>
+
+<input
+id="num2"
+type="number"
+placeholder="Second Number">
+
+<br><br>
+
+<button onclick="calculate('+')">+</button>
+<button onclick="calculate('-')">-</button>
+<button onclick="calculate('*')">*</button>
+<button onclick="calculate('/')">/</button>
+
+<br><br>
+
+<h2 id="result">
+Result:
+</h2>
+
+</div>
+
+</section>
+
+<section id="clock">
+
+<h1>🌍 World Clocks</h1>
+
+<div class="dashboard-grid">
+
+<div class="card">
+<h2>🇳🇵 Kathmandu</h2>
+<p id="nepal"></p>
+</div>
+
+<div class="card">
+<h2>🇬🇧 London</h2>
+<p id="london"></p>
+</div>
+
+<div class="card">
+<h2>🇺🇸 New York</h2>
+<p id="newyork"></p>
+</div>
+
+<div class="card">
+<h2>🇪🇸 Madrid</h2>
+<p id="madrid"></p>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
